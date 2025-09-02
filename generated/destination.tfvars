@@ -1,0 +1,8 @@
+destination_bucket = "bb-destination--bucket-sb"
+profile = "AccountB"
+source_bucket = "bb-bucket--source"
+destination_account_id = "219818469926"
+source_role_arn = "arn:aws:iam::529710251707:role/DataSyncSourceRole"
+destination_role_arn = "arn:aws:iam::219818469926:role/DataSyncDestinationRole"
+destination_region = "ap-south-1"
+source_region = "ap-south-1"

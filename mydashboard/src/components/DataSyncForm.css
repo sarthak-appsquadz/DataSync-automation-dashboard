@@ -1,0 +1,216 @@
+/* Fullscreen background container */
+.form-page {
+  min-height: 100vh;
+  background-image: url('https://assets.prd.mktg.konghq.com/images/2020/07/Destination-Automation-Art-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  overflow:auto;
+}
+
+
+/* Output Container */
+.output-container {
+ margin-top: 30px;
+    background-color: #efecec;
+    color: #333;
+    padding: 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* width: 73vh; */
+     width: 100%;               /* full width of parent */
+     max-width: 800px;          /* limit width to prevent overflow on big screens */
+    box-sizing: border-box;    /* includes padding in width */
+}
+
+/* Wrapper */
+.form-wrapper {
+  width: 100%;
+  max-width: 600px;
+  
+}
+
+.form-wrapper img{
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+
+/* Glassmorphism Form */
+.form-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(15px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeSlideUp 1s ease-in-out;
+}
+
+
+/* Title */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+/* Inputs & Select */
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #00bfff;
+  outline: none;
+}
+
+/* Buttons */
+.form-container button,
+.destroy-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button {
+  background-color: #00bfff;
+}
+
+.form-container button:hover {
+  background-color: #0077aa;
+}
+
+.destroy-btn {
+   width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.destroy-btn:hover {
+  background-color: #d45252 !important;
+}
+
+
+
+.output-container pre {
+  white-space: pre-wrap;       /* ✅ wrap long lines */
+  word-break: break-word;      /* ✅ break inside long strings */
+  overflow-x: auto;
+}
+
+.terraform-output {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: monospace;
+}
+
+
+/* Spinner inside button */
+.spinner {
+  height: 20px;
+  width: 20px;
+  border: 3px solid #ffffff;
+  border-top: 3px solid #0077aa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-container h2 {
+    font-size: 20px;
+  }
+
+  .form-container input,
+  .form-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Mirror effect (optional visual) */
+.form-container::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform: scaleY(-1);
+  opacity: 0.2;
+  border-radius: 16px;
+  z-index: -1;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+  height: 44%;
+}
+
+/* Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .output-container {
+    font-size: 13px;
+    padding: 12px;
+    max-height: 300px;
+  }
+}
