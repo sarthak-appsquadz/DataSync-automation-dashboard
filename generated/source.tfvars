@@ -1,5 +1,5 @@
 source_bucket = "bb-bucket--source"
-destination_role_arn = "arn:aws:iam::219818469926:role/DataSyncDestinationRole"
+destination_role_arn = "arn:aws:iam::2198184699XX:role/DataSyncDestinationRole"
 profile = "AccountA"
 source_region = "ap-south-1"
-source_role_arn = "arn:aws:iam::529710251707:role/DataSyncSourceRole"
+source_role_arn = "arn:aws:iam::5297102517XX:role/DataSyncSourceRole"
